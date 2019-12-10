@@ -25,3 +25,22 @@ class Offer(models.Model):
 
     def __str__(self):
         return self.offer_title
+
+    def get_absolute_url(self):
+        """ Returns a fully-qualified path for a page (/droxey/my-new-wiki-page). """
+        path_components = {'username': self.username, 'slug': self.slug}
+        return reverse('offer-page', kwargs=path_components)
+
+    def save(self, *args, **kwargs):
+        """ Creates a URL safe slug automatically when a new a page is created. """
+
+        # STRETCH CHALLENGES:
+        #   1. Add time zone support for `created` and `modified` dates if you're receiving the warning below:
+        #       RuntimeWarning: DateTimeField received a naive datetime (YYYY-MM-DD HH:MM:SS)
+        #       while time zone support is active.
+        #   2. Add the ability to update the slug when the Page is edited.
+        if not self.pk:  # To detect new objects, check if self.pk exists.
+            self.slug = slugify(self.offer_title, allow_unicode=True)
+
+        # Call save on the superclass.
+        return super(Offer, self).save(*args, **kwargs)
