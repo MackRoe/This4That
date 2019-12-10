@@ -2,13 +2,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap with popper css link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- bootstrap theme -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="styles.css">
   <title>{% block title %}TradeIt{% endblock %}</title>
 </head>
 <body>
+    <!-- Begin NavBar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+              <span class="navbar-brand" href="/">TradeIt</span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-info pl-5 pr-0" href="signup.html">Sign Up</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">/</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link text-info pl-0" href="login.html">Log In</a>
+                  </li>
+                  <!-- <li>
+                    <a href="profile.html"><img src="https://img.icons8.com/dusk/64/000000/cat-profile.png" width="35px" length="35px"> Prrrofile</a>
+                    </li> -->
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+
+                  <input class="form-control ml-1" type="search" placeholder="" aria-label="Search">
+                <!-- justify-content-center (on the parent) d-flex for parent -->
+                  <a class="btn btn-outline-info link-unstyled" href="search-error.html">&#x1F9D0;  Search</a>
+                </form>
+              </div>
+            </nav>
+            <!--End NavBar -->
+
   <main>
     {% block content %}
     {% endblock %}
   </main>
+  <!-- bootstrap javascript links -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
