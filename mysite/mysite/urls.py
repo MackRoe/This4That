@@ -21,5 +21,6 @@ urlpatterns = [
     path('tradeit/', include('tradeit.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('api/', include('api.urls')),
     path('admin/', admin.site.urls),
 ]

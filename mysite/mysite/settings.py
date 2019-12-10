@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'tradeit.apps.TradeitConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -122,4 +123,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_LOGOUT_URL = '/'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
