@@ -72,6 +72,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
+OFFER_PAGE_TITLE_MAX_LENGTH = 800
+
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases

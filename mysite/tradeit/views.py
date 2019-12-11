@@ -12,9 +12,9 @@ def index(request):
 
 def profile_page(request):
     model = Profile
-
+    profile = Profile.objects.all()
     profile_context = {
-        "profile": Profile.objects.all()
+        "profile": profile
     }
 
     return render(request, 'tradeit/profile.html', profile_context)

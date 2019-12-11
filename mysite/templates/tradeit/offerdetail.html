@@ -1,1 +1,10 @@
+{% extends 'base.html' %}
+
 You've reached the offer detail page
+{% block content %}
+{% for offer in offers %}
+-
+{{ offer.offer_title }}
+-
+{% endfor %}
+{% endblock %}

@@ -2,11 +2,11 @@
 
 {% block content %}
 <div class="col-md-12 pt-5">
-    <h1>Profile Page</h2>
+    <h1>Profile Page</h1>
         <div class="mb-5 mt-3">
             <h3>Details</h3>
-    Name: <em>{{ user.username }}</em><br>
-    Email: {{ user_email }}<br>
+    Name: <em>{{ profile.user_name }}</em><br>
+    Email: <em>{{ profile.user_email }}</em><br>
         </div>
     <button class="btn btn-danger rounded shadow">EDIT</button>
 </div>
