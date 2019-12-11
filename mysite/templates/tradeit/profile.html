@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-Name: {{ user_name }}<br>
-Email: {{ user_email }}
-
+<div class="col-md-12 pt-5">
+    <h1>Profile Page</h2>
+        <div class="mb-5 mt-3">
+            <h3>Details</h3>
+    Name: <em>{{ user.username }}</em><br>
+    Email: {{ user_email }}<br>
+        </div>
+    <button class="btn btn-danger rounded shadow">EDIT</button>
+</div>
 {% endblock %}
