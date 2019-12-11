@@ -3,11 +3,21 @@ from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.shortcuts import render
 
-from .models import Offer
+from .models import Offer, Profile
 
 
 def index(request):
     return HttpResponse("TradeIt index page")
+
+
+def profile_page(request):
+    model = Profile
+
+    profile_context = {
+        "profile": Profile.objects.all()
+    }
+
+    return render(request, 'tradeit/profile.html', profile_context)
 
 
 class OfferList(ListView):
