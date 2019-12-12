@@ -1,0 +1,18 @@
+<div class="card mb-3">
+
+    <h5 class="card-header ">{{ offer_title }}</h5>
+
+    <div class="card-body">
+    <p class="card-text text-dark">
+      {{ page.offer_desc|truncatewords_html:30 }}
+      <hr>
+        <div class="text-right">
+            <a href="{% url 'offer_detail' offer.slug %}" title="Read More">
+                Read More
+            </a>
+        </div>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">by <b>{{ user.profile.user_name }}</b></small>
+    </div>
+</div>

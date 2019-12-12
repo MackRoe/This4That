@@ -1,1 +1,19 @@
+{% extends 'base.html' %}
+
 samples
+
+
+{% block content %}
+<div class="card-columns mt-5 ml-5">
+    {% for offer in offers %}
+        {% include "partials/offer.html" %}
+    {% endfor %}
+</div>
+<p>
+{{ offer.offer_title }}<br>
+{{ offer.offer_description }}
+<p>
+{{ offer.offer_maker}}
+</p>
+
+{% endblock %}

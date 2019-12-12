@@ -79,7 +79,8 @@ class OfferSampleView(ListView):
     model = Offer
 
     def get(self, request):
+        offers = Offer.objects.all()[:4]
         offer_context = {
-            "offers": Offer.objects.all()[:4]
+            "offers": offers
         }
         return render(request, "tradeit/samples.html", offer_context)
