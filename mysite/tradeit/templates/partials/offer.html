@@ -4,7 +4,7 @@
 
     <div class="card-body">
     <p class="card-text text-dark">
-      {{ page.offer_desc|truncatewords_html:30 }}
+      {{ offer.offer_desc|truncatewords_html:30 }}
       <hr>
         <div class="text-right">
             <a href="{% url 'offer_detail' offer.slug %}" title="Read More">
