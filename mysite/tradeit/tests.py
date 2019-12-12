@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from wiki.models import Page
 
 
-class WikiTestCase(TestCase):
+class TradeitTestCase(TestCase):
     def test_true_is_true(self):
         """ Tests if True is equal to True. Should always pass. """
         self.assertEqual(True, True)
