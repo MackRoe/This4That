@@ -2,9 +2,17 @@
 
 You've reached the offer detail page
 {% block content %}
-{% for offer in offers %}
--
-    {{ offer.offer_title }}
--
-{% endfor %}
+    <div class="col-md-12 mt-5 ml-5 pt-5 pl-5">
+    <h2>{{ page.offer_title }}</h2>
+    <p>
+    {{ page.offer_description }}
+
+    <p>
+        <strong>Tokens Requested:</strong> {{ page.tokens_requested }}
+        <p>
+            <button class="btn btn-success rounded shadow">Request Offer</button>
+    </p>
+    </div>
+
+
 {% endblock %}

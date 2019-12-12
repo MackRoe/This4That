@@ -3,7 +3,7 @@ from django.test import TestCase
 # Create your tests here.
 from django.test import TestCase
 from django.contrib.auth.models import User
-from wiki.models import Page
+from tradeit.models import Profile, Offer
 
 
 class TradeitTestCase(TestCase):
@@ -16,7 +16,7 @@ class TradeitTestCase(TestCase):
         """ Tests the slug generated when saving a Page. """
         # Author is a required field in our model.
         # Create a user for this test and save it to the test database.
-        user_name = User()
+        user = User()
         user_email = "@"
         user.save()
 
@@ -27,3 +27,17 @@ class TradeitTestCase(TestCase):
         # Make sure the slug that was generated in Page.save()
         # matches what we think it should be.
         self.assertEqual(page.slug, "my-test-page")
+
+
+class TradeitApiCase(TestCase):
+    def setUp(self):
+        page = Offer(offer_title="My Test Page", offer_description="test 123")
+        page.save()
+
+    def test_api(self):
+        test_offer = Offer.objects.get(offer_title="My Test Page")
+        self.assertEqual(test_offer.offer_description, "test 123")
+
+
+class TradeitAccountsCase(TestCase):
+    pass
