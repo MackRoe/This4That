@@ -42,7 +42,7 @@
     </ul>
 
     {% else %}
-    <div class="col-md-8 mr-5 pl-5 pb-5">
+    <div class="col-md-12 pt-5 mr-5 pl-5 pb-5 bg-light">
     <p>
         Sign up for a new account and get a
         <h5>TEN TOKEN</h5>
@@ -51,8 +51,8 @@
     <button class="btn btn-warning primary rounded shadow text-dark ml-3">
         SIGN UP</button><br>
           <p class="mt-5">You are not logged in.
-          <button class="btn btn-light rounded shadow ml-3">
-              <a href="{% url 'login' %}">LOGIN</a>
+          <button class="btn btn-success rounded shadow ml-3">
+              <a href="{% url 'login' %}" class="text-light">LOGIN</a>
             </button></p>
     </div>
     {% endif %}
