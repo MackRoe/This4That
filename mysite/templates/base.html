@@ -33,7 +33,7 @@
                   </li>
                   {% if user.is_authenticated %}
                   <li class="nav-item">
-                    <a class="nav-link pl-5 pr-2 text-warning" href="/">Sign Out</a>
+                    <a class="nav-link pl-5 pr-2 text-warning" href="{% url 'logout' %}">Sign Out</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#">/</a>

@@ -1,14 +1,14 @@
-<div class="card mb-3">
+<div class="card mb-3 border-dark">
 
-    <h5 class="card-header ">{{ offer.offer_title }}</h5>
+    <h5 class="card-header bg-success text-light">{{ offer.offer_title }}</h5>
 
     <div class="card-body">
     <p class="card-text text-dark">
       {{ offer.offer_description|truncatewords_html:30 }}
       <hr>
-        <div class="text-right">
+        <div class="container-fluid text-right bg-dark pt-2 pb-2">
             <a href="{% url 'offer_detail' offer.slug %}" title="Read More">
-                Read More
+                <span class="text-warning">(read more)</span>
             </a>
         </div>
     </div>

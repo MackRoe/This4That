@@ -10,6 +10,13 @@
     Email: <em>{{ user.profile.user_email }}</em><br>
             </p>
         </div>
-    <button class="btn btn-danger rounded shadow">EDIT</button>
+    <button class="btn btn-danger rounded shadow" onclick="devNotice()">
+        EDIT
+    </button>
+    <script>
+    function devNotice() {
+      alert("TradeIt thanks you for your patience while this feature is being developed.");
+    }
+    </script>
 </div>
 {% endblock %}

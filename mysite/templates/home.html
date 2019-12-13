@@ -5,20 +5,11 @@
 
 
     {% block content %}
-    <div class="col-md-12 ml-4 mt-4">
+    <div class="jumbotron jumbotron-fluid pt-5 pb-3 bg-success">
     {% if user.is_authenticated %}
-      Welcome to TradeIt, {{ user.username }}!
-    <p>
-        <a href="{% url 'logout' %}">
-            <button class="btn btn-danger rounded shadow mt-2">
-          Log Out
-              </button>
-        </a>
-    </p>
-    {% else %}
-      <p>You are not logged in</p>
-      <a href="{% url 'login' %}">login</a>
-    {% endif %}
+      <h1 class="text-white">Welcome to TradeIt, {{ user.username }}!</h1>
+    </div>
+    <div class="col-md-12 ml-4 mt-4">
 
     <ul>
         <li>
@@ -31,6 +22,17 @@
             <a href="{% url 'offer_list' %}">Api JSON</a>
         </li>
     </ul>
+
+    {% else %}
+    <div class="col-md-8 mr-5 pb-5">
+          <p>You are not logged in</p>
+          <button class="btn btn-light rounded shadow">
+              <a href="{% url 'login' %}">LOGIN</a>
+            </button>
+    </div>
+    {% endif %}
+
+
 
 
     </div>

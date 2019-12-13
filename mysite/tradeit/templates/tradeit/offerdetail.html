@@ -13,7 +13,15 @@ You've reached the offer detail page
             <p>
                 <strong>Tokens Requested:</strong> {{ page.tokens_requested }}
                 <p>
-                    <button class="btn btn-success rounded shadow">Request Offer</button>
+                    <button class="btn btn-success rounded shadow" onclick="devNotice()">
+                        Request Offer
+                    </button>
+
+                    <script>
+                    function devNotice() {
+                      alert("TradeIt thanks you for your patience while this feature is being developed.");
+                    }
+                    </script>
             </p>
             </div>
             <div class="col-md-3 float-right bg-warning pt-5 pb-5">
