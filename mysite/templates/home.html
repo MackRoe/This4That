@@ -6,6 +6,26 @@
 
     {% block content %}
     <div class="jumbotron jumbotron-fluid pt-5 pb-3 bg-success">
+        <div class="row">
+                <div class="col-md-10">
+                    <div class="col-md-5 pl-5 text-light">
+                        <p>.
+                        <h1><em>TradeIt</em></h2>
+                        <h3> Value Uncoupled From Currency</h3>
+                        <p>
+                            View offers and request barter! Sign up for a new
+                            account and get a
+                            <h5>TEN TOKEN</h5>
+                            <em>starter bonus!</em>
+                        </p>
+                        <button class="btn btn-warning primary rounded shadow text-dark">
+                            SIGN UP</button>
+                    </div>
+
+                    <p>.
+                    </p>
+                </div>
+            </div>
     {% if user.is_authenticated %}
       <h1 class="text-white">Welcome to TradeIt, {{ user.username }}!</h1>
     </div>
@@ -24,7 +44,7 @@
     </ul>
 
     {% else %}
-    <div class="col-md-8 mr-5 pb-5">
+    <div class="col-md-8 mr-5 pl-5 pb-5">
           <p>You are not logged in</p>
           <button class="btn btn-light rounded shadow">
               <a href="{% url 'login' %}">LOGIN</a>
