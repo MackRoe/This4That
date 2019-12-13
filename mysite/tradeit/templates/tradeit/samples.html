@@ -4,11 +4,12 @@ samples
 
 
 {% block content %}
-<div class="card-columns mt-5 ml-5">
-    {% for offer in offers %}
-        {% include "partials/offer.html" %}
-    {% endfor %}
+<div class="col-md-12 ml-5 mt-5">
+    <div class="card-columns mt-5 ml-5">
+        {% for offer in offers %}
+            {% include "partials/offer.html" %}
+        {% endfor %}
+    </div>
 </div>
-
 
 {% endblock %}

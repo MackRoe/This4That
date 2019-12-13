@@ -4,6 +4,7 @@ from django.test import TestCase
 from django.test import TestCase
 from django.contrib.auth.models import User
 from tradeit.models import Profile, Offer
+from datetime import datetime
 
 
 class TradeitTestCase(TestCase):
@@ -21,7 +22,7 @@ class TradeitTestCase(TestCase):
         user.save()
 
         # Create and save a new page to the test database.
-        page = Offer(offer_title="My Test Page", offer_description="test")
+        page = Offer(offer_title="My Test Page", offer_description="test", pub_date=datetime.now())
         page.save()
 
         # Make sure the slug that was generated in Page.save()
@@ -29,15 +30,14 @@ class TradeitTestCase(TestCase):
         self.assertEqual(page.slug, "my-test-page")
 
 
-class TradeitApiCase(TestCase):
-    def setUp(self):
-        page = Offer(offer_title="My Test Page", offer_description="test 123")
-        page.save()
-
-    def test_api(self):
-        test_offer = Offer.objects.get(offer_title="My Test Page")
-        self.assertEqual(test_offer.offer_description, "test 123")
-
-
-class TradeitAccountsCase(TestCase):
-    pass
+class SamplesViewTests(TestCase):
+    def test_samples_page(self):
+        user = User.objects.create()
+        offer = Offer.objects.create(offer_title="Something", offer_description="description of something", pub_date=datetime.now())
+        response = self.client.get('/tradeit/')
+        self.assertEqual(response.status_code, 200)
+        response = response.context['offers']
+        self.assertQuerysetEqual(
+            response,
+            ['<Offer: Something>']
+        )
