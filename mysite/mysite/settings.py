@@ -25,7 +25,7 @@ SECRET_KEY = 'iyavx77%&eb4ad)%@d723=7tdye3yu2un(=n@d1$yi41e@c3(n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'tradeit-em-v2.herokuapp.com']
 
 
 # Application definition
