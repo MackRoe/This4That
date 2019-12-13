@@ -7,6 +7,10 @@ formerly named [BarterCoin](https://mackroe.github.io/Barter-Coin/)
 new repository for back end development.
 [previous repository](https://github.com/MackRoe/Barter-Coin)
 
+## v2
+
+Deployed at [TradeIt](https://tradeit-em.herokuapp.com/)
+
 ## v1 - _How to use_
 
 -Clone repository
