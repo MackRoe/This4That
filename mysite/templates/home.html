@@ -9,17 +9,11 @@
         <div class="row">
                 <div class="col-md-10">
                     <div class="col-md-5 pl-5 text-light">
-                        <p>.
-                        <h1><em>TradeIt</em></h2>
-                        <h3> Value Uncoupled From Currency</h3>
+
+                        <h1>TradeIt</h1>
+                        <h3> <em>Value Uncoupled From Currency</em></h3>
                         <p>
-                            View offers and request barter! Sign up for a new
-                            account and get a
-                            <h5>TEN TOKEN</h5>
-                            <em>starter bonus!</em>
-                        </p>
-                        <button class="btn btn-warning primary rounded shadow text-dark">
-                            SIGN UP</button>
+                            View offers and request barter!
                     </div>
 
                     <p>.
@@ -27,7 +21,11 @@
                 </div>
             </div>
     {% if user.is_authenticated %}
-      <h1 class="text-white">Welcome to TradeIt, {{ user.username }}!</h1>
+        <div class="col-md-12">
+              <h2 class="text-dark ml-4">
+                  Welcome to TradeIt, {{ user.username }}!
+              </h2>
+        </div>
     </div>
     <div class="col-md-12 ml-4 mt-4">
 
@@ -45,6 +43,13 @@
 
     {% else %}
     <div class="col-md-8 mr-5 pl-5 pb-5">
+    <p>
+        Sign up for a new account and get a
+        <h5>TEN TOKEN</h5>
+        <em>starter bonus!</em>
+    </p>
+    <button class="btn btn-warning primary rounded shadow text-dark">
+        SIGN UP</button>
           <p>You are not logged in</p>
           <button class="btn btn-light rounded shadow">
               <a href="{% url 'login' %}">LOGIN</a>
@@ -52,7 +57,39 @@
     </div>
     {% endif %}
 
-
+    <!-- Begin Benifits -->
+        <div class="container mb-5 mt-5 pb-5 pt-5">
+          <div class="row">
+            <div class="col-lg-4">
+              <h4>Save Money</h4>
+              <p class="lead">Why pay for something you don't need to pay for? With this amazing app, you don't have to! Then you can put the money you would have spent on a product or service, into savings for that vacation you've dreamed of.
+                  <!-- <br><a href="https://www.scaledagileframework.com">SAFe</a> -->
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <h4>Local Engagement</h4>
+              <p class="lead">Network within your community for both value and friendship. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque.
+                  <!-- <br><a href="https://www.merriam-webster.com/dictionary/healthy">Mirriam-Webster</a> -->
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <h4>Reduce, Re-Use, Recycle</h4>
+              <p class="lead">Live greener by generating less waste. tempor incididunt ut labore et dolore magna aliqua. Condimentum lacinia eros odio. dolor magna eget est lorem ipsum dolor.
+                  <!-- <br><a href="http://ournameisfun.com">Fun.</a> -->
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- End Benifits -->
+        <div class="container col-md-10">
+    <!-- Info Section Start-->
+    <div class="bg-info text-light pt-5 pb-5 pr-5 pl-5 mb-5 rounded shadow border-primary">
+        <h4>What are TradeIt TOKENS?</h4>
+        <p>
+            Tokens are a way of counting value when return offers aren't satisfactory.
+        </p>
+    </div>
+    <!-- Info Section End -->
 
 
     </div>
