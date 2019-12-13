@@ -22,9 +22,9 @@
             </div>
     {% if user.is_authenticated %}
         <div class="col-md-12">
-              <h2 class="text-dark ml-4">
+              <h3 class="text-dark ml-4">
                   Welcome to TradeIt, {{ user.username }}!
-              </h2>
+              </h3>
         </div>
     </div>
     <div class="col-md-12 ml-4 mt-4">
@@ -47,13 +47,13 @@
         Sign up for a new account and get a
         <h5>TEN TOKEN</h5>
         <em>starter bonus!</em>
-    </p>
-    <button class="btn btn-warning primary rounded shadow text-dark">
-        SIGN UP</button>
-          <p>You are not logged in</p>
-          <button class="btn btn-light rounded shadow">
+
+    <button class="btn btn-warning primary rounded shadow text-dark ml-3">
+        SIGN UP</button><br>
+          <p class="mt-5">You are not logged in.
+          <button class="btn btn-light rounded shadow ml-3">
               <a href="{% url 'login' %}">LOGIN</a>
-            </button>
+            </button></p>
     </div>
     {% endif %}
 
@@ -83,7 +83,7 @@
         <!-- End Benifits -->
         <div class="container col-md-10">
     <!-- Info Section Start-->
-    <div class="bg-info text-light pt-5 pb-5 pr-5 pl-5 mb-5 rounded shadow border-primary">
+    <div class="bg-warning text-dark pt-5 pb-5 pr-5 pl-5 mb-5 rounded shadow border-primary">
         <h4>What are TradeIt TOKENS?</h4>
         <p>
             Tokens are a way of counting value when return offers aren't satisfactory.

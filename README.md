@@ -20,6 +20,11 @@ new repository for back end development.
 
 -Then, open your browser and in the url field enter [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
+-To see authenticated user access, you will need to create a superuser. Enter Control-C
+to exit runserver mode and enter `python3 manage.py createsuperuser` then follow
+the prompts. Once your superuser account is created, you can spin the server
+back up and use your superuser account to log in on the website
+
 ### Credits
 
 [Make School](http://make.sc)
