@@ -25,7 +25,7 @@ SECRET_KEY = 'iyavx77%&eb4ad)%@d723=7tdye3yu2un(=n@d1$yi41e@c3(n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'tradeit-em-v2.herokuapp.com', 'tradeit-em.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'tradeit-em-v2.herokuapp.com', 'tradeit-em.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -125,9 +125,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/templates/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 
 DEFAULT_LOGOUT_URL = '/'
 
