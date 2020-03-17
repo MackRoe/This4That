@@ -6,8 +6,11 @@
         <div class="mb-5 mt-3">
             <h3>Details</h3>
             <p>
-    Name: <em>{{ user.profile.user_name }}</em><br>
-    Email: <em>{{ user.profile.user_email }}</em><br>
+    User Name: <em>{{ user.username }}</em><br>
+    First Name: <em>{{ user.first_name }}</em><br>
+    Last Name: <em>{{ user.last_name }}</em><br>
+    Email: <em>{{ user.email }}</em><br>
+    <!-- # user.profile.bio -->
             </p>
         </div>
     <button class="btn btn-danger rounded shadow" onclick="devNotice()">

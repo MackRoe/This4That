@@ -1,0 +1,17 @@
+use deployment lesson from bew1.2 to troubleshoot heroku deployment
+
+todo list:
+    add another form -- profile model -- bio field
+    in signup page change view
+    https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html#sign-up-with-profile-model
+
+    make get and post
+
+
+    links
+    From Meredith Murphy to Everyone: (11:33 AM)
+ https://docs.djangoproject.com/en/3.0/ref/contrib/auth/ 
+From Meredith Murphy to Everyone: (11:41 AM)
+ https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html#sign-up-with-extra-fields 
+From Meredith Murphy to Everyone: (12:06 PM)
+ https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html#sign-up-with-profile-model 
