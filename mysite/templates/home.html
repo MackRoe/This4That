@@ -10,7 +10,7 @@
                 <div class="col-md-10">
                     <div class="col-md-5 pl-5 text-light">
 
-                        <h1>TradeIt</h1>
+                        <h1>This4That</h1>
                         <h3> <em>Value Uncoupled From Currency</em></h3>
                         <p>
                             View offers and request barter!
@@ -23,7 +23,7 @@
     {% if user.is_authenticated %}
         <div class="col-md-12">
               <h3 class="text-dark ml-4">
-                  Welcome to TradeIt, {{ user.username }}!
+                  Welcome to This4That, {{ user.username }}!
               </h3>
         </div>
     </div>
@@ -45,14 +45,15 @@
     <div class="col-md-12 pt-5 mr-5 pl-5 pb-5 bg-light">
     <p>
         Sign up for a new account and get a
-        <h5>TEN TOKEN</h5>
+        <font size="+2" class="text-success">TEN TOKEN</font>
         <em>starter bonus!</em>
 
     <button class="btn btn-warning primary rounded shadow text-dark ml-3">
-        SIGN UP</button><br>
+        <strong>SIGN UP</strong>
+    </button><br>
           <p class="mt-5">You are not logged in.
           <button class="btn btn-success rounded shadow ml-3">
-              <a href="{% url 'login' %}" class="text-light">LOGIN</a>
+              <a href="{% url 'login' %}" class="text-light"><strong>LOGIN</strong></a>
             </button></p>
     </div>
     {% endif %}
@@ -84,9 +85,16 @@
         <div class="container col-md-10">
     <!-- Info Section Start-->
     <div class="bg-warning text-dark pt-5 pb-5 pr-5 pl-5 mb-5 rounded shadow border-primary">
-        <h4>What are TradeIt TOKENS?</h4>
+        <h4>What are T4T TOKENS?</h4>
         <p>
-            Tokens are a way of counting value when return offers aren't satisfactory.
+            Tokens are a way of counting value when return offers aren't
+            satisfactory. Each user is given a default number of tokens at
+            registration. Additional tokens may be requested and will require
+            the payment of a service fee. This is to discourage their use, since
+            <em>This4That</em> is intended primarily as a barter app.
+        <p>
+            <button class="btn-success float-right">Buy Additional Tokens</button>
+
         </p>
     </div>
     <!-- Info Section End -->

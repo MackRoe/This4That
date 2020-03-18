@@ -8,5 +8,5 @@ urlpatterns = [
     path('', views.OfferSampleView.as_view(), name="index"),
     path('offer_list/', views.OfferList.as_view(), name="offer_list"),
     path('offer_detail/<slug>', views.OfferDetail.as_view(), name="offer_detail"),
+    path('update_profile', views.update_profile, name="update_profile"),
 ]
-# not sure if that last comma belongs there
