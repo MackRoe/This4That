@@ -1,17 +1,34 @@
 use deployment lesson from bew1.2 to troubleshoot heroku deployment
 
 todo list:
-    add another form -- profile model -- bio field
+    add another form -- profile model -- bio and locations fields
+        √ model updated but display values on page not functional
     in signup page change view
     https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html#sign-up-with-profile-model
 
     make get and post
 
 
-    links
-    From Meredith Murphy to Everyone: (11:33 AM)
+LINKS
+    contributor: Meredith Murphy
  https://docs.djangoproject.com/en/3.0/ref/contrib/auth/ 
-From Meredith Murphy to Everyone: (11:41 AM)
+
  https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html#sign-up-with-extra-fields 
-From Meredith Murphy to Everyone: (12:06 PM)
+
  https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html#sign-up-with-profile-model 
+
+QUESTIONS:
+    "make get and post" ... was this for the update_profile ?
+    "in signup page change view" ... meant what?
+
+ISSUES:
+    profile page not displaying user's location
+    console displaying error 404 "GET /styles.css HTTP/1.1" on page reload
+    attempted to impose custom font unsuccessfully
+
+
+DONE:
+    'django.contrib.postgres' added to INSTALLED_APPS
+    ran pip3 freeze => requirements.txt to update
+    reverted requirements.txt
+    commented out # 'django.contrib.postgres',
