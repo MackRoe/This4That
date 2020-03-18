@@ -25,10 +25,13 @@ ISSUES:
     profile page not displaying user's location
     console displaying error 404 "GET /styles.css HTTP/1.1" on page reload
     attempted to impose custom font unsuccessfully
-
+    .gitignore not working
+    attempted to correct following the directions at
+        https://bytefreaks.net/programming-2/my-gitignore-file-is-ignored-by-git-and-it-does-not-work
+        now notes.txt does not appear in tree
 
 DONE:
     'django.contrib.postgres' added to INSTALLED_APPS
     ran pip3 freeze => requirements.txt to update
     reverted requirements.txt
-    commented out # 'django.contrib.postgres',
+    commented out "# 'django.contrib.postgres',"

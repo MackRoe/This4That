@@ -2,14 +2,14 @@
 
 [original proposal](https://github.com/MackRoe/Barter-Coin/blob/master/proposal.md)
 
-formerly named [BarterCoin](https://mackroe.github.io/Barter-Coin/)
+formerly named [BarterCoin](https://mackroe.github.io/Barter-Coin/), rebranded as This4That
 
 new repository for back end development.
 [previous repository](https://github.com/MackRoe/Barter-Coin)
 
 ## v2
 
-Deployed at [TradeIt](https://tradeit-em.herokuapp.com/)
+Deployed at [This4That](https://tradeit-em.herokuapp.com/) *(under construction)*
 
 ## v1 - _How to use_
 
