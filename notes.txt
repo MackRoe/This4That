@@ -28,10 +28,18 @@ ISSUES:
     .gitignore not working
     attempted to correct following the directions at
         https://bytefreaks.net/programming-2/my-gitignore-file-is-ignored-by-git-and-it-does-not-work
-        now notes.txt does not appear in tree
+        now notes.txt does not appear in directory tree
 
 DONE:
     'django.contrib.postgres' added to INSTALLED_APPS
     ran pip3 freeze => requirements.txt to update
     reverted requirements.txt
     commented out "# 'django.contrib.postgres',"
+
+----------------------
+REMOVED CODE
+<!-- <script>
+function devNotice() {
+  alert("TradeIt thanks you for your patience while this feature is being developed.");
+}
+</script> --> onclick="devNotice()"
