@@ -78,7 +78,7 @@ class OfferDetail(DetailView):
         pass
 
 
-class OfferSampleView(ListView):
+class OfferListView(ListView):
     '''Create an includible sample of offers for display on
     main page'''
     model = Offer
@@ -88,4 +88,21 @@ class OfferSampleView(ListView):
         offer_context = {
             "offers": offers
         }
-        return render(request, "tradeit/samples.html", offer_context)
+        return render(request, "offer_list", offer_context)
+
+
+class OfferCreate(CreateView):
+    model = Offer
+    fields = ['offer_title', 'offer_description', 'offer_maker', 'tokens_requested']
+    success_url = reverse_lazy("offer_list")
+
+
+class OfferUpdate(UpdateView):
+    model = Offer
+    fields = ['offer_title', 'offer_description', 'offer_maker', 'tokens_requested']
+    success_url = reverse_lazy("tradeit/offerlist.html")
+
+
+class OfferDelete(DeleteView):
+    model = Offer
+    success_url = reverse_lazy("tradeit/offerlist.html")
