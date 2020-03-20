@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from accounts import forms
-from .models import Profile
+from .models import Profile, Offer
 
 
 class UserForm(forms.ModelForm):
@@ -13,3 +13,8 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('location', 'bio')
+
+class NewOfferForm(forms.ModelForm):
+    class Meta:
+        model = Offer
+        fields = ('offer_maker', 'offer_title', 'offer_description', 'tokens_requested')

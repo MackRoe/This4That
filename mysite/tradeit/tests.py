@@ -34,7 +34,7 @@ class SamplesViewTests(TestCase):
     def test_samples_page(self):
         user = User.objects.create()
         offer = Offer.objects.create(offer_title="Something", offer_description="description of something", pub_date=datetime.now())
-        response = self.client.get('/tradeit/')
+        response = self.client.get('/this4that/')
         self.assertEqual(response.status_code, 200)
         response = response.context['offers']
         self.assertQuerysetEqual(

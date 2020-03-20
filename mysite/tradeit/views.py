@@ -12,10 +12,10 @@ from django.shortcuts import redirect
 
 
 from .models import Offer, Profile
-from .forms import UserForm, ProfileForm
+from .forms import UserForm, ProfileForm, NewOfferForm
 
 def index(request):
-    return HttpResponse("TradeIt index page")
+    return HttpResponse("This4That index page")
 
 
 def profile_page(request):
@@ -26,7 +26,7 @@ def profile_page(request):
         "profile": profile
     }
 
-    return render(request, 'tradeit/profile.html', profile_context)
+    return render(request, 'this4that/profile.html', profile_context)
 
 
 @login_required
@@ -39,7 +39,7 @@ def update_profile(request):
             user_form.save()
             profile_form.save()
             messages.success(request, 'Your profile was successfully updated!')
-            return redirect('/tradeit/profile_page')
+            return redirect('/this4that/profile_page')
         else:
             messages.error(request, 'Please correct the error below.')
     else:
@@ -58,7 +58,7 @@ class OfferList(ListView):
         offer_context = {
             "offers": Offer.objects.all()
         }
-        return render(request, 'tradeit/offerlist.html', offer_context)
+        return render(request, 'this4that/offerlist.html', offer_context)
         pass
 
 
@@ -88,21 +88,31 @@ class OfferListView(ListView):
         offer_context = {
             "offers": offers
         }
-        return render(request, "offer_list", offer_context)
+        return render(request, "tradeit/offerlist.html", offer_context)
 
 
 class OfferCreate(CreateView):
-    model = Offer
-    fields = ['offer_title', 'offer_description', 'offer_maker', 'tokens_requested']
-    success_url = reverse_lazy("offer_list")
+    template_name = 'newoffer.html'
+    print('something ..')
 
+    def get(self, request):
+        form = NewOfferForm()
+        print('get_method for new_offer')
+        return render(request, 'tradeit/newoffer.html', {'form': form})
+
+    def post(self, request):
+        form = PageForm(request.POST)
+        if form.is_valid():
+            newcard = form.save()
+            return HttpResponseRedirect(reverse_lazy('offer_detail', args=[newcard.slug]))
+        return render(request, 'newoffer.html', {'form': form})
 
 class OfferUpdate(UpdateView):
     model = Offer
     fields = ['offer_title', 'offer_description', 'offer_maker', 'tokens_requested']
-    success_url = reverse_lazy("tradeit/offerlist.html")
+    success_url = reverse_lazy("offerlist")
 
 
 class OfferDelete(DeleteView):
     model = Offer
-    success_url = reverse_lazy("tradeit/offerlist.html")
+    success_url = reverse_lazy("offerlist")
