@@ -9,7 +9,7 @@ new repository for back end development.
 
 ## v2
 
-Deployed at [This4That](https://tradeit-em.herokuapp.com/) *(under construction)*
+Deployed at [This4That](https://this4that.herokuapp.com/) *(under construction)*
 
 ## v1 - _How to use_
 
