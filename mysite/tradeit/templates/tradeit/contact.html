@@ -10,7 +10,13 @@
                 {{ field.label_tag }}<br />
                 {{ field }}<br /><br />
             {% endfor %}
-            <button type="submit">Submit</button>
+
+            <button type="submit" onclick="devNotice()">Submit</button>
+            <script>
+            function devNotice() {
+              alert("This4That thanks you for your patience while this feature is being developed.");
+            }
+            </script>
         </form>
     </div>
 </div>
