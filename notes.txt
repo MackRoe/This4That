@@ -1,3 +1,5 @@
+* PATH: ~/school-projects/BEW1-2/contractor *
+
 use deployment lesson from bew1.2 to troubleshoot heroku deployment
 
 todo list:
