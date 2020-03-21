@@ -44,7 +44,7 @@ class Offer(models.Model):
     # transaction_complete: BooleanField
 
     def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=10)
 
     def __str__(self):
         return self.offer_title
@@ -67,3 +67,16 @@ class Offer(models.Model):
 
         # Call save on the superclass.
         return super(Offer, self).save(*args, **kwargs)
+
+
+class Contact(models.Model):
+    sender_name = models.CharField(max_length=200)
+    sender_email = models.EmailField()
+    sender_message_content = models.TextField(
+        # required=True,
+        # widget=forms.Textarea
+    )
+
+    def get_absolute_url(self):
+        path_components = {'pk': _id}
+        return reverse('contact', kwargs=path_components)

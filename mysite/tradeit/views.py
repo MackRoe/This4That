@@ -11,8 +11,8 @@ from django.contrib import messages
 from django.shortcuts import redirect
 
 
-from .models import Offer, Profile
-from .forms import UserForm, ProfileForm, NewOfferForm
+from .models import Offer, Profile, Contact
+from .forms import UserForm, ProfileForm, NewOfferForm, ContactForm
 
 def index(request):
     return HttpResponse("This4That index page")
@@ -26,7 +26,7 @@ def profile_page(request):
         "profile": profile
     }
 
-    return render(request, 'this4that/profile.html', profile_context)
+    return render(request, 'tradeit/profile.html', profile_context)
 
 
 @login_required
@@ -93,7 +93,6 @@ class OfferListView(ListView):
 
 class OfferCreate(CreateView):
     template_name = 'newoffer.html'
-    print('something ..')
 
     def get(self, request):
         form = NewOfferForm()
@@ -107,6 +106,7 @@ class OfferCreate(CreateView):
             return HttpResponseRedirect(reverse_lazy('offer_detail', args=[newcard.slug]))
         return render(request, 'newoffer.html', {'form': form})
 
+
 class OfferUpdate(UpdateView):
     model = Offer
     fields = ['offer_title', 'offer_description', 'offer_maker', 'tokens_requested']
@@ -116,3 +116,24 @@ class OfferUpdate(UpdateView):
 class OfferDelete(DeleteView):
     model = Offer
     success_url = reverse_lazy("offerlist")
+
+
+class ContactUser(CreateView):
+    model = Contact
+    # return render(request, 'contact.html', {
+    #     'form': form_class,
+    # })
+
+    def get(self, request):
+        form = ContactForm()
+
+        return render(request, 'tradeit/contact.html', {'form': form})
+
+    def post(self, request):
+        form = ContactForm(request.POST)
+        pk = User._id
+        if form.is_valid():
+            newcontact = form.save()
+            messages.success(request, 'Your message was successfully sent!')
+            return HttpResponseRedirect(reverse_lazy('contact', args=[newcontact.pk]))
+        return render(request, 'tradeit/contact.html', {'form': form})

@@ -2,16 +2,15 @@
 
 use deployment lesson from bew1.2 to troubleshoot heroku deployment
 
-todo list:
-    add another form -- profile model -- bio and locations fields
-        √ model updated but display values on page not functional
+TODO:
+    add another form -- profile model -- bio and locations fields √ DONE
     in signup page change view
     https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html#sign-up-with-profile-model
 
     make get and post
 
 
-LINKS
+LINKS:
     contributor: Meredith Murphy
  https://docs.djangoproject.com/en/3.0/ref/contrib/auth/ 
 
@@ -24,19 +23,21 @@ QUESTIONS:
     "in signup page change view" ... meant what?
 
 ISSUES:
-    profile page not displaying user's location
+    profile page not displaying user's location √ RESOLVED
     console displaying error 404 "GET /styles.css HTTP/1.1" on page reload
-    attempted to impose custom font unsuccessfully
-    .gitignore not working
+        custom font unsuccessful
+    .gitignore not working for notes.txt
     attempted to correct following the directions at
         https://bytefreaks.net/programming-2/my-gitignore-file-is-ignored-by-git-and-it-does-not-work
-        now notes.txt does not appear in directory tree
+            -notes.txt hidden in /mysite directory branch
+    remote renaming chaos √ RESOLVED (tentatively)
 
 DONE:
     'django.contrib.postgres' added to INSTALLED_APPS
     ran pip3 freeze => requirements.txt to update
     reverted requirements.txt
     commented out "# 'django.contrib.postgres',"
+    reset git remotes on both heroku and github
 
 ----------------------
 REMOVED CODE
