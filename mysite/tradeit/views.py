@@ -72,7 +72,6 @@ class OfferDetail(DetailView):
             "page": page
         }
         return render(request, "tradeit/offerdetail.html", context)
-        pass
 
     def post(self, request, slug):
         pass
@@ -134,6 +133,29 @@ class ContactUser(CreateView):
         pk = User._id
         if form.is_valid():
             newcontact = form.save()
-            messages.success(request, 'Your message was successfully sent!')
+            messages.success(request, 'Your message was successfully saved!')
             return HttpResponseRedirect(reverse_lazy('contact', args=[newcontact.pk]))
         return render(request, 'tradeit/contact.html', {'form': form})
+
+
+class MessageListView(ListView):
+    model = Contact
+
+    def get(self, request):
+        message = Contact.objects.all()
+        msg_context = {
+            "message": message
+            }
+        return render(request, "tradeit/messagelist.html", msg_context)
+
+
+class MessageDetailView(DetailView):
+    model = Contact
+
+    def get(self, request, pk):
+        """ Returns a specific message """
+        message = Contact.objects.get(pk=pk)
+        context = {
+            "page": page
+        }
+        return render(request, "tradeit/messagedetail.html", message)

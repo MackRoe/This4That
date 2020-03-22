@@ -12,5 +12,7 @@ urlpatterns = [
     path('new_offer', views.OfferCreate.as_view(), name="new_offer"),
     path('update_offer/<slug>', views.OfferUpdate.as_view(), name="update_offer"),
     path('delete_offer/<slug>', views.OfferDelete, name="delete_offer"),
-    path('contact/', views.ContactUser.as_view(), name='contact'),
+    path('contact/', views.ContactUser.as_view(), name="contact"),
+    path('message_list/', views.MessageListView.as_view(), name="message_list"),
+    path('message_detail/', views.MessageDetailView.as_view(), name="message_detail"),
 ]
