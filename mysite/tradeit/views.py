@@ -130,7 +130,7 @@ class ContactUser(CreateView):
 
     def post(self, request):
         form = ContactForm(request.POST)
-        pk = User._id
+        pk = User.pk
         if form.is_valid():
             newcontact = form.save()
             messages.success(request, 'Your message was successfully saved!')
@@ -151,10 +151,11 @@ class MessageListView(ListView):
 
 class MessageDetailView(DetailView):
     model = Contact
+    # pk = Contact.objects.get('_id')
 
     def get(self, request, pk):
         """ Returns a specific message """
-        message = Contact.objects.get(pk=pk)
+        message = Contact.objects.get(pk)
         context = {
             "page": page
         }
