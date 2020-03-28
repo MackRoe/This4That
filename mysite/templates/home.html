@@ -23,7 +23,9 @@
     {% if user.is_authenticated %}
         <div class="col-md-12">
               <h3 class="text-dark ml-4">
-                  Welcome to This4That, {{ user.username }}!
+                  Welcome to This4That, {{ user.username }}!  <a href="{% url 'new_offer' %}" class="btn btn-warning text-large shadow rounded">
+                      Create a NEW OFFER
+                  </a>
               </h3>
         </div>
     </div>

@@ -102,8 +102,8 @@ class OfferCreate(CreateView):
         form = PageForm(request.POST)
         if form.is_valid():
             newcard = form.save()
-            return HttpResponseRedirect(reverse_lazy('offer_detail', args=[newcard.slug]))
-        return render(request, 'newoffer.html', {'form': form})
+            return HttpResponseRedirect(reverse_lazy('tradeit/offer_detail/<slug>', args=[newcard.slug]))
+        return render(request, 'tradeit/newoffer.html', {'form': form})
 
 
 class OfferUpdate(UpdateView):

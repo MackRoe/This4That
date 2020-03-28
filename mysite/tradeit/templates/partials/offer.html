@@ -1,6 +1,6 @@
 <div class="card mb-3 border-dark">
 
-    <h5 class="card-header bg-success text-light">{{ offer.offer_title }}</h5>
+    <h5 class="card-header bg-warning text-light">{{ offer.offer_title }}</h5>
 
     <div class="card-body">
     <p class="card-text text-dark">
@@ -8,7 +8,7 @@
       <hr>
         <div class="container-fluid text-right">
             <a href="{% url 'offer_detail' offer.slug %}" title="Read More">
-                <span class="text-success">(read more)</span>
+                <span class="text-warning">(read more)</span>
             </a>
         </div>
     </div>
