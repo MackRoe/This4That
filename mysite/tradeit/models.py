@@ -47,7 +47,7 @@ class Offer(models.Model):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=10)
 
     def __str__(self):
-        return self.offer_title
+        return self.offer_maker
 
     def get_absolute_url(self):
         """ Returns a fully-qualified path for a page (/droxey/my-new-wiki-page). """

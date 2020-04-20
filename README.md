@@ -1,4 +1,4 @@
-# TradeIt
+# This4That
 
 [original proposal](https://github.com/MackRoe/Barter-Coin/blob/master/proposal.md)
 

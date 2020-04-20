@@ -83,7 +83,7 @@ class OfferListView(ListView):
     model = Offer
 
     def get(self, request):
-        offers = Offer.objects.all()[:4]
+        offers = Offer.objects.all()
         offer_context = {
             "offers": offers
         }
@@ -101,8 +101,10 @@ class OfferCreate(CreateView):
     def post(self, request):
         form = PageForm(request.POST)
         if form.is_valid():
+            print('new offer post action made. Form is valid')
             newcard = form.save()
             return HttpResponseRedirect(reverse_lazy('tradeit/offer_detail/<slug>', args=[newcard.slug]))
+        print('form not valid')
         return render(request, 'tradeit/newoffer.html', {'form': form})
 
 
